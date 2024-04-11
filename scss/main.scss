@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$clr-primary-1: hsl(263, 55%, 52%);
+$clr-primary-2: hsl(217, 19%, 35%);
+$clr-primary-3: hsl(219, 29%, 14%);
+$clr-primary-4: hsl(0, 0%, 100%);
+$clr-primary-5: hsl(0, 0%, 81%);
+$clr-primary-6: hsl(210, 46%, 95%);
+
+$ff-primary: "Barlow Semi Condensed", sans-serif;
+
+$fw-primary: 500;
+$fw-secondary: 700;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: $ff-primary;
+  background-color: $clr-primary-6;
+  margin: 2rem 0;
+}
+
+.container {
+  min-width:400px;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 1fr; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 2.5rem;
+ 
+}
+.inner-container {
+  border-radius: 10px;
+  padding: 2rem 1.5rem 1rem 2rem;
+}
+
+.dan {
+  background-color: $clr-primary-1;
+  background-image: url('../images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top 0px right 50px;
+  grid-column: span 2;
+}
+.jon {
+  background-color: $clr-primary-2;
+}
+.kira {
+  grid-row: span 2;
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+.pat {
+  background-color: $clr-primary-3;
+  grid-column: span 2;
+}
+.jean, .kira{
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  background-color: $clr-primary-4;
+}
+.img-container img{
+    aspect-ratio: 1;
+    border-radius: 50%;
+    width: 1.75rem;
+    border: 2px solid $clr-primary-4;
+}
+.pat img{
+  border:2px solid $clr-primary-1;
+}
+.header{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+.header span{
+  display: block;
+}
+.name-grad{
+  font-size: .8rem;
+}
+.name-grad{
+  color:$clr-primary-4;
+}
+.name-grad .grad{
+  opacity: 50%;
+  font-size: .7rem;
+}
+.opening-text{
+  font-size: 1.2rem;
+  color: $clr-primary-4;
+  font-weight: 600;
+}
+.clr-primary-3{
+  color:$clr-primary-3;
+}
+.main-text{
+  opacity: 70%;
+}
+.clr-primary-4{
+  opacity: 70%;
+  color:$clr-primary-4;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width:1180px) {
+
+  .container{
+    grid-template-columns: 1fr;
+    
+  }
+
+.inner-container{
+    padding: none;
+    
+   }
+  .dan{
+    grid-area:1/1/2/2;
+
+  }
+  
+  .jon{
+    grid-area:2/1/3/2;
+  }.jean{
+   grid-area:3/1/4/2;
+  }
+  .pat{
+    grid-area:4/1/5/2;
+  }.kira{
+    grid-area:5/1/6/2;
+  }
+ 
+}
+
